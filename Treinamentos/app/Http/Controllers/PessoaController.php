@@ -30,15 +30,16 @@ class PessoaController extends Controller
        $salas = Sala::all();
        $cafe = Cafe::all();
 
+       // Condições que verificam se as as salas de AULA e CAFÉ foram criadas primeiro
+       // Fazendo com o que o fluxo da aplicação seja seguido
        if (count($salas) < 2) {
-
            $request->session()->flash('mensagem','Número de Salas de Aula e Café deve totalizar 2 para poder prosseguir');
            $mensagem = $request->session()->get('mensagem');
 
             return view('pessoas.create', compact('mensagem'));
        }
 
-       if (count($cafe) === 0) {
+       if (count($cafe) < 0) {
            $request->session()->flash('mensagem','Número de Salas de Aula e Café deve totalizar 2 para poder prosseguir');
            $mensagem = $request->session()->get('mensagem');
 
@@ -51,27 +52,29 @@ class PessoaController extends Controller
        $lotacaoTotal = $sala1 + $sala2;
 
 
-        if ($numeroPessoas = Pessoa::all()->count() == $lotacaoTotal) {
-            return redirect('/pessoas');
+       if ($numeroPessoas = Pessoa::all()->count() == $lotacaoTotal) {
+           $request->session()->flash('mensagem','Limite de Alunos Atingido.');
+           $mensagem = $request->session()->get('mensagem');
 
-        }
+           return view('pessoas.create', compact('mensagem'));
+       }
 
-        if (empty($request->nome)) {
-            $request->session()->flash('mensagem','Os campos devem ser preenchidos');
-            $mensagem = $request->session()->get('mensagem');
+       if (empty($request->nome)) {
+           $request->session()->flash('mensagem','Os campos devem ser preenchidos');
+           $mensagem = $request->session()->get('mensagem');
 
-            return view('pessoas.create', compact('mensagem'));
-        }
+           return view('pessoas.create', compact('mensagem'));
+       }
 
-        $nome = $request->nome;
+       $nome = $request->nome;
 
-        $pessoa = new Pessoa();
-        $pessoa->nome = $nome;
-        $pessoa->save();
+       $pessoa = new Pessoa();
+       $pessoa->nome = $nome;
+       $pessoa->save();
 
-        $this->primeiraEtapa($pessoa);
+       $this->primeiraEtapa($pessoa);
 
-        return redirect('/pessoas');
+       return redirect('/pessoas');
     }
 
     public function show(int $id, Request $request)
@@ -105,17 +108,15 @@ class PessoaController extends Controller
 
 
 
-       #echo "Ola! " . $pessoa[0]->nome . "<br>";
-       #echo "Primeira etapa Sala: " . $salaEtapa1[0]->nome  . "<br>";
-       #echo  "Segunda etapa Sala: ".  $salaEtapa2[0]->nome  . "<br>";
-       #echo "Sala de Café: " . $salaCafe[0]->nome . "<br>";
-
-
         return view('pessoas.show', compact('pessoa', 'salaEtapa1', 'salaEtapa2', 'salaCafe'));
     }
 
     public function primeiraEtapa($pessoa)
     {
+        // Separamos a primeira etapa da seguinte forma:
+        // Se o ID da pessoas for impar , recebe a sala com numero impar
+        // Se o ID da pessoa for par, recebe a segunda sala que sera par
+
         if ($pessoa->id % 2 === 0) {
             $pessoa->etapa1 = 2;
             $pessoa->cafe = 2;

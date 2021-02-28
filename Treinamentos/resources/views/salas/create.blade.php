@@ -35,7 +35,7 @@
 
             <div class="col col-2">
                 <label for="lotacao"> Lotação: </label>
-                <input type="number" min="1" class="form-control" required placeholder="15" name="lotacao" id="lotacao">
+                <input type="number" min="1" class="form-control" required placeholder="10" name="lotacao" id="lotacao">
 
             </div>
 

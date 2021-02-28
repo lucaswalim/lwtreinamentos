@@ -25,15 +25,13 @@ Route::get('/pessoas/{id}', [\App\Http\Controllers\PessoaController::class, 'sho
 Route::get('/salas', [\App\Http\Controllers\SalaController::class, 'index']);
 Route::get('/salas/criar', [\App\Http\Controllers\SalaController::class, 'create']);
 Route::post('/salas/criar', [\App\Http\Controllers\SalaController::class, 'store']);
-Route::get('/salas/etapas', [\App\Http\Controllers\SalaController::class, 'primeiraEtapaSala']);
-Route::get('/salas/teste', [\App\Http\Controllers\SalaController::class, 'buscaSalasePessoas']);
+Route::get('/salas/etapas', [\App\Http\Controllers\SalaController::class, 'segundaEtapaSala']);
 Route::get('/salas/{id}', [\App\Http\Controllers\SalaController::class, 'show']);
 
 
 Route::get('/cafe', [\App\Http\Controllers\CafeController::class, 'index']);
 Route::get('/cafe/criar', [\App\Http\Controllers\CafeController::class, 'create']);
 Route::post('/cafe/criar', [\App\Http\Controllers\CafeController::class, 'store']);
-Route::get('/cafe/separar', [\App\Http\Controllers\CafeController::class, 'separar']);
 Route::get('/cafe/{id}', [\App\Http\Controllers\CafeController::class, 'show']);
 
 
