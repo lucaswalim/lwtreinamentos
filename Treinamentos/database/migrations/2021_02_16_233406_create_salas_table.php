@@ -16,13 +16,7 @@ class CreateSalasTable extends Migration
         Schema::create('salas', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nome');
-            $table->string('etapa1')->nullable(true);
-            $table->string('etapa2')->nullable(true);
             $table->integer('lotacao')->nullable(true);
-
-            #$table->integer('aluno_id')->unsigned()->nullable(true);
-            #$table->foreign('aluno_id')->references('id')->on('pessoas');
-
 
         });
     }

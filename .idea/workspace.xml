@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="70515ffa-acf0-474c-9912-e91ed5eb79df" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Treinamentos/resources/views/salas/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Treinamentos/resources/views/salas/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Treinamentos/database/database.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/Treinamentos/database/database.sqlite" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Treinamentos/database/migrations/2021_02_16_233406_create_salas_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/Treinamentos/database/migrations/2021_02_16_233406_create_salas_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Treinamentos/database/migrations/2021_02_16_233548_create_cafes_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/Treinamentos/database/migrations/2021_02_16_233548_create_cafes_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Treinamentos/resources/views/cafe/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Treinamentos/resources/views/cafe/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Treinamentos/storage/framework/sessions/62g9aAXhW4ttOfaGA1QCvVceAjfENJmXwV5CEcfS" beforeDir="false" afterPath="$PROJECT_DIR$/Treinamentos/storage/framework/sessions/62g9aAXhW4ttOfaGA1QCvVceAjfENJmXwV5CEcfS" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Treinamentos/storage/framework/views/8e38746508b5fc7400450630590607cf848dfb44.php" beforeDir="false" afterPath="$PROJECT_DIR$/Treinamentos/storage/framework/views/8e38746508b5fc7400450630590607cf848dfb44.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,6 +175,8 @@
       <workItem from="1614516320459" duration="4382000" />
       <workItem from="1614524334304" duration="2470000" />
       <workItem from="1614529526102" duration="421000" />
+      <workItem from="1614530663748" duration="728000" />
+      <workItem from="1614531420081" duration="6000" />
     </task>
     <servers />
   </component>

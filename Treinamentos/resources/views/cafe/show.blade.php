@@ -9,7 +9,7 @@
         <ul class="list-group">
             @foreach($pessoas as $pessoa)
                 <li class="list-group-item">
-                     {{$pessoa->nome}}
+                    ID:{{$pessoa->id}}   {{$pessoa->nome}}
                 </li>
             @endforeach
 

@@ -7,7 +7,7 @@
         <ul class="list-group">
             <?php $__currentLoopData = $pessoas; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $pessoa): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                 <li class="list-group-item">
-                     <?php echo e($pessoa->nome); ?>
+                    ID:<?php echo e($pessoa->id); ?>   <?php echo e($pessoa->nome); ?>
 
                 </li>
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
