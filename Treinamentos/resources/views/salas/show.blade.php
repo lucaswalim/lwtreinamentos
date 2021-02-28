@@ -5,7 +5,7 @@
 @endsection
 
 @section('conteudo')
-    <div class="row justify-content-around">
+    <div class="row justify-content-evenly">
         <div class="col-4">
             <h4>1ª Etapa</h4>
             <ul class="list-group">
@@ -18,10 +18,9 @@
             </ul>
         </div>
 
-
-        <div class="col-4 float-end">
+        <div class="col-4">
             <h4>2ª Etapa</h4>
-            <ul class="list-group mt-3">
+            <ul class="list-group">
 
                 @foreach($etapa2 as $pessoa)
                     <li class="list-group-item align-items-center">
@@ -31,6 +30,15 @@
             </ul>
         </div>
     </div>
+
+
+
+
+
+
+
+
+
 
 
 @endsection
