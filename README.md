@@ -9,13 +9,13 @@
 
 1. Download do Php: [PHP](https://windows.php.net/download#php-7.4) -> Opção zip na versão 7.. Thread Safe
    - Extrair arquivo em uma pasta desejada.
-   - copiar o arquivo "php.ini-development" e colar na mesma pasta, renomando com o nome "php.ini".
+   - copiar o arquivo "php.ini-development" e colar na mesma pasta, renomeando com o nome "php.ini".
    - abrir arquivo php.ini com editor de texto, buscar por nomes (Ctrl + f): "extension=pdo_sqlite"(*proximo linha 935*  e "extension_dir"(*proximo linha 761*), apagar o ";" do início.
 
 - Após Instalar Php, precisamos adicionar o Php nas variaveis de ambiente.
   - Menu Iniciar -> "adicionar as variaveis de ambiente do sistema" -> Variaveis de Ambiente -> Editar variavel Path -> Novo -> Colar o caminho da pasta onde o php foi extraido. 
 
-2. Subindo Api via localhost:
+2. Subindo a Aplicação via localhost:
    - Menu iniciar cmd, navegar até a pasta do projeto, exemplo: cd/desktop/lwtreinamentos
    - Após acessar a pasta digitar : php -S localhost:8000 -t public ou php artisan serve
 
